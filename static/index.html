@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackerNews UI</title>
+  <style>
+    .story-card, .job-card, .poll-card, .comment-card {
+      border: 1px solid #ddd;
+      margin-bottom: 1em;
+      padding: 1em;
+      border-radius: 5px;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 2em;
+    }
+    .pagination button {
+      margin: 0 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HackerNews</h1>
+  </header>
+
+  <main>
+    <section id="stories" class="section">
+      <h2 class="section-title">Stories</h2>
+      <div id="story-list">
+        <!-- Dynamic content for stories will be added here -->
+      </div>
+    </section>
+
+    <section id="jobs" class="section">
+      <h2 class="section-title">Jobs</h2>
+      <div id="job-list">
+        <!-- Dynamic content for jobs will be added here -->
+      </div>
+    </section>
+
+    <section id="polls" class="section">
+      <h2 class="section-title">Polls</h2>
+      <div id="poll-list">
+        <!-- Dynamic content for polls will be added here -->
+      </div>
+    </section>
+
+    <section id="comments" class="section">
+      <h2 class="section-title">Comments</h2>
+      <div id="comment-list">
+        <!-- Dynamic content for comments will be added here -->
+      </div>
+    </section>
+
+    <!-- Pagination buttons -->
+    <div class="pagination">
+      <button id="prev-page">Previous</button>
+      <button id="next-page">Next</button>
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+  </script>
+  <script src="client.js"></script>
+</body>
+</html>
